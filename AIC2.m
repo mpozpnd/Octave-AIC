@@ -9,7 +9,7 @@ function AIC=AIC2(n,d,A)
   for i=1:d
     hoge=0;
       for j=1:n
-        hoge+=(A(d,j)-mu(d))^2;
+        hoge+=(A(i,j)-mu(d))^2;
       end
     Sigma(i,i)=hoge/n;
   end
