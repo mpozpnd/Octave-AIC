@@ -16,9 +16,11 @@ function AIC=AIC3(n,d,A)
     Sigma(i,i)=z;
   end
 
+  invS=inv(Sigma);
+ 
   #対数尤度計算
   for i=1:n
-    res1+=log((1/(((2*pi)^(d/2))*((det(Sigma))^(1/2))))*exp((-1/2)*(A(:,i)-mu)'*inv(Sigma)*(A(:,i)-mu)));
+    res1+=log((1/(((2*pi)^(d/2))*((det(Sigma))^(1/2))))*exp((-1/2)*(A(:,i)-mu)'*invS*(A(:,i)-mu)));
   end
 
   #return AIC

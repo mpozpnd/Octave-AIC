@@ -1,8 +1,11 @@
 clear all;
 
 d=2
-n=100
-Sigma=[1 0;0 9]
+n=1000
+Z=rand(d,d);
+Sigma=Z'*Z
+#Sigma=[1 0;0 100]
+#Sigma=[1 0;0 1]
 Mu=0
 
 
